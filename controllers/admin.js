@@ -16,5 +16,9 @@ exports.deleteProd = async (req,res)=>{
 }
 
 exports.getEdit = async (req ,res)=>{
-
+    const editMode = req.query.edit;
+    if (!editMode) {
+        return;
+    }
+    
 }
