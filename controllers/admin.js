@@ -14,3 +14,7 @@ exports.deleteProd = async (req,res)=>{
     console.log("DESTROYED PRODUCT ");
     res.redirect('/dashboard')
 }
+
+exports.getEdit = async (req ,res)=>{
+
+}

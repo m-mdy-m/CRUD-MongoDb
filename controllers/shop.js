@@ -2,7 +2,8 @@ const Product = require("../models/Prodcut")
 
 exports.getAddProducts =  (req,res)=>{
     res.render('shop/add-product',{
-        path:req.path
+        path:req.path,
+        editing :false
     })
 }
 exports.postAddProducts = async (req,res)=>{
