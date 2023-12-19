@@ -1,0 +1,26 @@
+<%- include("include/base.ejs") %>
+<link rel="stylesheet" href="/css/home.css">
+</head>
+<%- include("include/header.ejs") %>
+
+<main class="main">
+        <% if (prods.length > 0) { %>
+                    <% prods.forEach(product => { %>
+                        <div class="wrapper_prodcuts">
+                            <h1 class="textProduct"> <%= product.title %> </h1>
+                            <p class="textProduct"> <%= product.price %> </p>
+                            <div class="conrole_card">
+                                <a href="/edit-product/<%=  product.id  %>?edit=true">EDIT</a>
+                                <form action="/dashboard/<%= Prodcut.id  %>" method="POS">
+                                    <button type="submit">delete</button>
+                                </form>
+                            </div>
+                        </div>
+                    <% }) %>
+
+            <% }else { %>
+                <h1 style="color: aliceblue; font-size: 200px; text-align: center;">no products</h1>
+                <% } %>
+</main>
+
+<%- include("include/end.ejs") %>
