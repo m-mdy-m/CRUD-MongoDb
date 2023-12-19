@@ -8,8 +8,11 @@ class Product {
     const db = await getDb();
     return db.collection("products").insertOne(this);
   }
-  static findById(id){
-    
+  static isValidID(id){
+    return /^[0-9\w]{24}$/.test(id)
+  }
+  static async findById(id) {
+    const db = await getDb();
   }
 }
 
