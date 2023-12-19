@@ -9,5 +9,5 @@ route.post('/dashboard/:prodId', adminControllers.deleteProd)
 route.get("/edit-product/:prodId", adminControllers.getEdit);
 
 
-route.post('/edit-product', adminControllers.postEditProduct);
+route.post('/edit-product', adminControllers.postEdit);
 module.exports = route
