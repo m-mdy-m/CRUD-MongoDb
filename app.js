@@ -6,6 +6,7 @@ const database = require('./database/database').connect
 
 // ROUTES 
 const homeROute = require("./routes/home")
+const addProduct = require('./routes/shop')
 app.set('view engine', 'ejs')
 app.set('views','views')
 
@@ -14,7 +15,7 @@ app.use(express.static(path.join(__dirname , "public")))
 
 
 app.use(homeROute)
-
+app.use(addProduct)
 const start = async ()=>{
     try{
         await database()
