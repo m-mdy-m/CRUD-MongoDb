@@ -1,11 +1,7 @@
 const express = require('express')
 
 const route = express.Router()
+const shopControllers = require('../controllers/shop')
 
-
-route.get('/add-product', (req,res)=>{
-    res.render('shop/add-product',{
-        path:req.path
-    })
-})
+route.get('/add-product', shopControllers.getAddProducts)
 module.exports  = route
