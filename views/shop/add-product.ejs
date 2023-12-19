@@ -1,14 +1,15 @@
 <%- include("../include/base.ejs") %>
+<link rel="stylesheet" href="/css/shop.css">
 </head>
 <%- include("../include/header.ejs") %>
 
 <main class="main">
-    <form action="/add-product" method="POST">
-        <div>
-            <input type="text" name="title" placeholder="name product..">
-            <input type="number" name="price" placeholder="price product..">
+    <form action="/add-product" method="POST" class="form">
+        <div class="wrapper_form">
+            <input type="text" name="title" placeholder="name product.." class="form_input">
+            <input type="number" name="price" placeholder="price product.." class="form_input">
         </div>
-        <button type="submit">ADD PRODUCT</button>
+        <button type="submit" class="btn">ADD PRODUCT</button>
     </form>
 </main>
 
