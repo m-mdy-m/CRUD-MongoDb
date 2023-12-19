@@ -1,7 +1,7 @@
-<%- include("include/base.ejs") %>
+<%- include("../include/base.ejs") %>
 <link rel="stylesheet" href="/css/home.css">
 </head>
-<%- include("include/header.ejs") %>
+<%- include("../include/header.ejs") %>
 
 <main class="main">
         <% if (prods.length > 0) { %>
@@ -10,8 +10,8 @@
                             <h1 class="textProduct"> <%= product.title %> </h1>
                             <p class="textProduct"> <%= product.price %> </p>
                             <div class="conrole_card">
-                                <a href="/edit-product/<%=  product.id  %>?edit=true">EDIT</a>
-                                <form action="/dashboard/<%= Prodcut.id  %>" method="POS">
+                                <a href="/edit-product/<%=  product._id  %>?edit=true">EDIT</a>
+                                <form action="/dashboard/<%= product._id  %>" method="POST">
                                     <button type="submit">delete</button>
                                 </form>
                             </div>
@@ -23,4 +23,4 @@
                 <% } %>
 </main>
 
-<%- include("include/end.ejs") %>
+<%- include("../include/end.ejs") %>

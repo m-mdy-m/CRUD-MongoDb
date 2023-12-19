@@ -7,3 +7,10 @@ exports.getDashboard = async (req,res)=>{
         prods: product
     });
 }
+
+exports.deleteProd = async (req,res)=>{
+    const id = req.params.prodId
+    await Product.deleteById(id)
+    console.log("DESTROYED PRODUCT ");
+    res.redirect('/dashboard')
+}
