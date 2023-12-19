@@ -1,0 +1,24 @@
+{
+  "name": "crud_mongodb",
+  "version": "1.0.0",
+  "description": "A simple note-keeping web app with CRUD operations, built on Express.js and MongoDB, using EJS templating.",
+  "main": "app.js",
+  "scripts": {
+    "test": "start "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m-mdy-m/CRUD-MongoDb.git"
+  },
+  "keywords": [
+    "nodejs",
+    "mongodb",
+    "express"
+  ],
+  "author": "mahdi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/m-mdy-m/CRUD-MongoDb/issues"
+  },
+  "homepage": "https://github.com/m-mdy-m/CRUD-MongoDb#readme"
+}
