@@ -1,19 +1,20 @@
 <%- include("include/base.ejs") %>
+<link rel="stylesheet" href="/css/home.css">
 </head>
 <%- include("include/header.ejs") %>
 
 <main class="main">
-    <div>
         <% if (prods.length > 0) { %>
                     <% prods.forEach(product => { %>
-                        <h1> <%= product.title %> </h1>
-                        <p> <%= product.price %> </p>
+                        <div class="wrapper_prodcuts">
+                            <h1 class="textProduct"> <%= product.title %> </h1>
+                            <p class="textProduct"> <%= product.price %> </p>
+                        </div>
                     <% }) %>
 
             <% }else { %>
                 <h1 style="color: aliceblue; font-size: 200px; text-align: center;">no products</h1>
                 <% } %>
-    </div>
 </main>
 
 <%- include("include/end.ejs") %>
