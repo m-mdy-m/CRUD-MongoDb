@@ -2,6 +2,14 @@
 </head>
 <%- include("../include/header.ejs") %>
 
-<main class="main"></main>
+<main class="main">
+    <form action="/add-product" method="POST">
+        <div>
+            <input type="text" name="title" placeholder="name product..">
+            <input type="number" name="price" placeholder="price product..">
+        </div>
+        <button type="submit">ADD PRODUCT</button>
+    </form>
+</main>
 
 <%- include("../include/end.ejs") %>
