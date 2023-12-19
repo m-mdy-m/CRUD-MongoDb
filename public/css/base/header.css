@@ -6,11 +6,19 @@
     height: 100%;
 }
 .navigation{
-
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
 }
 .navigation-items{
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
 }
 .navigation-items-link{
-
+    text-decoration: none;
+    font-size: 20px;
+    font-family: sans-serif;
+    color: antiquewhite;
 }
