@@ -4,7 +4,7 @@
   "description": "A simple note-keeping web app with CRUD operations, built on Express.js and MongoDB, using EJS templating.",
   "main": "app.js",
   "scripts": {
-    "test": "start "
+    "start": "nodemon app.js "
   },
   "repository": {
     "type": "git",
