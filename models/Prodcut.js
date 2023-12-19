@@ -12,6 +12,11 @@ class Product {
   static isValidID(id){
     return /^[0-9\w]{24}$/.test(id)
   }
+  static async fetch(){
+    const db = await getDb()
+    return db.collection('products').find().toArray()
+  }
+
   static async findById(id) {
     const db = await getDb();
     const objectId = mongodb.ObjectId

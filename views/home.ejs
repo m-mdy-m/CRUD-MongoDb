@@ -2,6 +2,18 @@
 </head>
 <%- include("include/header.ejs") %>
 
-<main class="main"></main>
+<main class="main">
+    <div>
+        <% if (prods.length > 0) { %>
+                    <% prods.forEach(product => { %>
+                        <h1> <%= product.title %> </h1>
+                        <p> <%= product.price %> </p>
+                    <% }) %>
+
+            <% }else { %>
+                <h1 style="color: aliceblue; font-size: 200px; text-align: center;">no products</h1>
+                <% } %>
+    </div>
+</main>
 
 <%- include("include/end.ejs") %>
