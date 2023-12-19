@@ -1,13 +1,13 @@
 const {MongoClient } = require("mongodb")
 
 
-const url = "mongodb://localhost:27017/CRUD"
+const url = "mongodb://localhost:27017/crud"
 
 let db;
 
 const connect = async ()=>{
     try{
-        const client = await MongoClient.connect(url)
+        const client = await MongoClient.connect(url,{ useUnifiedTopology: true })
         db = client.db()
         console.log('connect database');
         return client
