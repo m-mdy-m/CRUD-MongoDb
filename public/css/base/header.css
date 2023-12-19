@@ -22,3 +22,6 @@
     font-family: sans-serif;
     color: antiquewhite;
 }
+.active{
+    color: rgb(150, 106, 48);
+}
