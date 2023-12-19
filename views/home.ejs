@@ -1,21 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME</title>
-    <link rel="stylesheet" href="/css/main.css">
+<%- include('include/base.ejs') %>
 </head>
-<body>
-    <div class="container">
-        <header class="header">
-            <nav class="navigation">
-                <li class="navigation-items"><a href="/" class="navigation-items-link <% path==="/"? :'active': "" %> ">HOME</a></li>
-                <li class="navigation-items"><a href="/add-product" class="navigation-items-link <% path==="/add-product"? :'active': "" %> ">ADD PRODUCT</a></li>
-                <li class="navigation-items"><a href="/dashboard" class="navigation-items-link <% path==="/dashboard"? :'active': "" %> ">DASHBOARD</a></li>
-            </nav>
-        </header>
-        <main class="main"></main>
-    </div>
-</body>
-</html>
+<%- include('include/header.ejs') %>
+
+<main class="main"></main>
+
+<%- include('include/end.ejs') %>
