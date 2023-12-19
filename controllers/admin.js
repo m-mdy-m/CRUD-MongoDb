@@ -21,6 +21,14 @@ exports.getEdit = async (req ,res)=>{
         return;
     }
     const id = req.params.prodId
-    console.log(id);
-    res.redirect('/dashboard')
+    try{
+        const product = await Product.findById(id)
+        res.render('shop/add-product',{
+            path:req.path,
+            editing : editMode,
+            product,
+        })
+    }catch(err){
+        console.log('err edit =>', err);
+    }
 }
