@@ -8,6 +8,9 @@ class Product {
     const db = await getDb();
     return db.collection("products").insertOne(this);
   }
+  static findById(id){
+    
+  }
 }
 
 module.exports = Product;
