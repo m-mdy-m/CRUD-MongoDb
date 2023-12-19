@@ -6,7 +6,7 @@ route.get('/dashboard', adminControllers.getDashboard )
 
 
 route.post('/dashboard/:prodId', adminControllers.deleteProd)
-route.get("/edit-product/:productId", adminControllers.getEdit);
+route.get("/edit-product/:prodId", adminControllers.getEdit);
 
 
 // route.post('/edit-product', adminControllers.postEditProduct);

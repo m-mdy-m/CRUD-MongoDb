@@ -20,5 +20,7 @@ exports.getEdit = async (req ,res)=>{
     if (!editMode) {
         return;
     }
-    
+    const id = req.params.prodId
+    console.log(id);
+    res.redirect('/dashboard')
 }
