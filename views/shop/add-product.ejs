@@ -10,6 +10,9 @@
             <input type="number" name="price" placeholder="price product.." class="form_input" value="<% if(editing) { %><%= product.price %><% }  %>">
         </div>
         <button type="submit" class="btn"> <% if (editing) { %> UPDATE <%} else{ %> ADD PRODUCT <%} %> </button>
+        <% if (editing) { %>
+            <input type="hidden" value="<% product._id %>" name="id">
+        <% } %>
     </form>
 </main>
 
