@@ -2,11 +2,7 @@ const express = require('express')
 
 const route = express.Router()
 
-
-route.get('/', (req,res)=>{
-    res.render('home.ejs',{
-        path:req.path
-    })
-})
+const homeControllers = require('../controllers/home')
+route.get('/', homeControllers.getHome)
 
 module.exports = route
